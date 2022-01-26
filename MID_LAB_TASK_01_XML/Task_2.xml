@@ -1,0 +1,36 @@
+<studentInfo>
+    <student id="23">
+        <name>
+            <firstName>John</firstName>
+            <lastName>Carter</lastName>  
+        </name>
+        <admissoinDate>
+            <day>25</day>
+            <month>12</month>
+            <year>2015</year>
+        </admissoinDate>
+    </student>
+    <student id="29">
+        <name>
+            <firstName>Bob</firstName>
+            <lastName>Marshal</lastName>  
+        </name>
+        <admissoinDate>
+            <day>13</day>
+            <month>01</month>
+            <year>1999</year>
+        </admissoinDate>
+    </student>
+    <student id="35">
+        <name>
+            <firstName>Clark</firstName>
+            <lastName>Kent</lastName>  
+        </name>
+        <admissoinDate>
+            <day>17</day>
+            <month>06</month>
+            <year>2005</year>
+        </admissoinDate>
+    </student>
+
+</studentInfo>
