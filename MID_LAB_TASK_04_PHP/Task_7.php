@@ -1,6 +1,6 @@
 <?php
 function piramidStar(){
-    for ($i=1; $i<=5; $i++)	
+    for ($i=1; $i<=3; $i++)	
     {	 
         for($j=1;$j<=$i;$j++)	  
         {	  	
@@ -26,22 +26,27 @@ function abcPiramid(){
 }
 
 function revPiramid(){ 
-    for($i=0;$i<=2;$i++){  
-        for($j=$i+1;$j<=3;$j++){  
-        echo $j." ";
-        $j=0;  
-        }  
-        echo "<br>";  
-        }   
+    for ($i = 3; $i >= 1; $i--) {
+        for ($j = 1; $j <= $i; ++$j) {
+           echo $j." ";
+        }
+        echo "<br>";
+     }
 }
 
-    piramidStar();
-    echo "<br>";
-    abcPiramid();
-    echo "<br>";
-    revPiramid();
-
-    
-
+echo "<table border=1>
+    <tr>
+        <td>";
+            piramidStar();
+        echo "</td>
+        <td>";
+            abcPiramid();
+        echo "</td>
+        <td>";
+            revPiramid();
+        echo "</td>
+    <tr>
+</table>
+";
 ?>
 
