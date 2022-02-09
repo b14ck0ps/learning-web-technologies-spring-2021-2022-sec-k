@@ -9,7 +9,7 @@ function findValue($arry,$search){
         {
             $found == true;
             break;
-        }
+        } 
     }
     if($found)
         echo"<b>$search</b> found";
