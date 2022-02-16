@@ -50,7 +50,7 @@
                                 :<?=$_SESSION['user']['name']?>
                             </td>
                             <td style="text-align: center; padding-left: 10px;" rowspan="3">
-                                <img src="https://i.ibb.co/SyWBnFb/image.png" alt="image" border="0"> <br>
+                                <img src="image.png" alt="image" border="0"> <br>
                                 <a href="change_dp.php">Change</a>
                             </td>
                         </tr>
