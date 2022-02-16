@@ -8,9 +8,9 @@
 		$password = $_REQUEST['password'];
 		$gender = $_REQUEST['gender'];
 		$dob = [
-            $_REQUEST['dd'],
-            $_REQUEST['mm'],
-            $_REQUEST['yyyy']
+            'dd' => $_REQUEST['dd'],
+            'mm' => $_REQUEST['mm'],
+            'yyyy' => $_REQUEST['yyyy']
         ];
 		
 
