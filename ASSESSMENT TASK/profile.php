@@ -78,7 +78,7 @@
                                 Date of Birth
                             </td>
                             <td style="border-bottom: 1px solid gray;">
-                                : 19/09/1998
+                                : <?=$_SESSION['user']['dob']['dd']?>/<?=$_SESSION['user']['dob']['mm']?>/<?=$_SESSION['user']['dob']['yyyy']?>
                             </td>
                             <td style="border-bottom: 1px solid gray;"></td>
                         </tr>
