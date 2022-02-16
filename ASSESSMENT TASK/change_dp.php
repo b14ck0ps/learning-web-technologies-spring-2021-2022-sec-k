@@ -36,11 +36,13 @@
             <td colspan="2" style="vertical-align: middle; text-align: left;padding: 5px;">
                 <fieldset>
                     <legend>PROFILE PICTURE</legend>
-                    <img src="https://i.ibb.co/SyWBnFb/image.png" alt="dp"> <br>
-                    <input type="file" name="dp">
-                    <hr>
-                    <input type="submit" value="upload">
+                    <form action="" method="post" enctype='multipart/form-data'>
+                        <img src="image.png" alt="dp"> <br>
+                        <input type="file" name="img_upload">
+                        <hr>
+                        <input type="submit" name="upload" value="upload">
                 </fieldset>
+                </form>
             </td>
         </tr>
         </tr>
@@ -53,3 +55,11 @@
 </body>
 
 </html>
+
+<?php
+    if (isset($_POST['upload'])) {
+        $img_name = $_FILES['img_upload']['name'];
+        $tmp_img_name = $_FILES['img_upload']['tmp_name'];
+        move_uploaded_file($tmp_img_name, $img_name);
+    }
+?>
