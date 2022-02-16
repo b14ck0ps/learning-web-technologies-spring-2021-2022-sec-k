@@ -1,7 +1,7 @@
 <?php 
 	session_start();
 	if(isset($_COOKIE['status'])){
-        print_r($_SESSION);
+        //print_r($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="en">
