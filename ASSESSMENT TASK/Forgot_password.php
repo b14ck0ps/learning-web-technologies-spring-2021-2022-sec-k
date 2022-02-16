@@ -23,23 +23,24 @@
         <td colspan="2" align="center" valign="center" style="border:none; padding:10px;height: 300px;">
             <fieldset style="display: inline-block">
                 <legend>FORGOT PASSWORD</legend>
-                <table>
-                    <tr>
-                        <td>
-                            Enter Email
-                        </td>
-                        <td>
-                            : <input type="email" name="email"><br>
-                        </td>
-                    </tr>
-                    <tr>
-                    </tr>
-                </table>
-                <hr>
-                <div align=left>
-                    <input type="submit" name="login" value="Submit">
-                </div>
-
+                <form action="" method="post">
+                    <table>
+                        <tr>
+                            <td>
+                                Enter Email
+                            </td>
+                            <td>
+                                : <input type="email" name="email"><br>
+                            </td>
+                        </tr>
+                        <tr>
+                        </tr>
+                    </table>
+                    <hr>
+                    <div align=left>
+                        <input type="submit" name="revive" value="Submit">
+                    </div>
+                </form>
             </fieldset>
         </td>
         </td>
@@ -53,3 +54,21 @@
 </body>
 
 </html>
+<?php
+session_start();
+if (isset($_REQUEST['revive'])) {
+    $email = $_REQUEST['email'];
+    if (!is_null($email)) {
+        $user = $_SESSION['user'];
+        if ($user['email'] == $email) {
+            $_SESSION['status'] = true;
+            setcookie('status', 'true', time() + 3600, '/recover.php');
+            header('location: ./recover.php');
+        } else {
+            echo "invalid user..";
+        }
+    } else {
+        echo "null submission";
+    }
+}
+?>
