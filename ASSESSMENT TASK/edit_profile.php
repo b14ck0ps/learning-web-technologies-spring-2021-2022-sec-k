@@ -40,79 +40,81 @@
             <td colspan="2" style="vertical-align: middle; text-align: left;padding: 5px;">
                 <fieldset>
                     <legend>EDIT PROFILE</legend>
-                    <table>
-                        <tr>
-                            <td style="width: 220px; text-align: left; padding : 5px;">
-                                Name
-                            </td>
-                            <td>
-                                : <input type="text" name="name" value="<?=$_SESSION['user']['name']?>">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <hr>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 220px; text-align: left; padding : 5px;">
-                                Email
-                            </td>
-                            <td>
-                                : <input type="email" name="email" value="<?=$_SESSION['user']['email']?>">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <hr>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <hr>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                            Gender
-                            </td>
-                            <td colspan="2">
-                                    :
-                                    <input type="radio" name="gender" <?php if ($_SESSION['user']['gender'] == 'Male')  echo ' checked="checked"';?> > Male
-                                    <input type="radio" name="gender" <?php if ($_SESSION['user']['gender'] == 'Female')  echo ' checked="checked"';?> > Female
-                                    <input type="radio" name="gender" <?php if ($_SESSION['user']['gender'] == 'Other')  echo ' checked="checked"';?> > Other
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <hr>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Date Of Birth</td>
-                            <td colspan="2">
-                                    <table>
-                                        <tr>
-                                            <td>
-                                                : <input type="text" name="dob" value="<?=$_SESSION['user']['dob']['dd']?>/<?=$_SESSION['user']['dob']['mm']?>/<?=$_SESSION['user']['dob']['yyyy']?>"><br>
-                                                <i>(dd/mm/yyyy)</i>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </fieldset>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <hr>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="submit" name="submit" value="Submit">
-                            </td>
-                        </tr>
-                    </table>
+                    <form action="./edituser.php" method="post">
+                        <table>
+                            <tr>
+                                <td style="width: 220px; text-align: left; padding : 5px;">
+                                    Name
+                                </td>
+                                <td>
+                                    : <input type="text" name="name" value="<?=$_SESSION['user']['name']?>">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 220px; text-align: left; padding : 5px;">
+                                    Email
+                                </td>
+                                <td>
+                                    : <input type="email" name="email" value="<?=$_SESSION['user']['email']?>">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                Gender
+                                </td>
+                                <td colspan="2">
+                                        :
+                                        <input type="radio" name="gender" <?php if ($_SESSION['user']['gender'] == 'Male')  echo ' checked="checked"';?> value="Male"> Male
+                                        <input type="radio" name="gender" <?php if ($_SESSION['user']['gender'] == 'Female')  echo ' checked="checked"';?> value="Female"> Female
+                                        <input type="radio" name="gender" <?php if ($_SESSION['user']['gender'] == 'Other')  echo ' checked="checked"';?> value="Other"> Other
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Date Of Birth</td>
+                                <td colspan="2">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    : <input type="text" name="dob" value="<?=$_SESSION['user']['dob']['dd']?>/<?=$_SESSION['user']['dob']['mm']?>/<?=$_SESSION['user']['dob']['yyyy']?>"><br>
+                                                    <i>(dd/mm/yyyy)</i>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </fieldset>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="submit" name="edit" value="Submit">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
                 </fieldset>
             </td>
         </tr>
