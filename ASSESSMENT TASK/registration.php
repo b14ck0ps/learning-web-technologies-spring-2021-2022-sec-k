@@ -24,121 +24,123 @@
             <td colspan="2" align="center" valign="center" style="border:none; padding:10px;height: 300px;">
                 <fieldset style="display: inline-block">
                     <legend>REGISTRATION</legend>
-                    <table>
-                        <tr>
-                            <td style="width: 220px; text-align: left; padding : 5px;">
-                                Name
-                            </td>
-                            <td>
-                                : <input type="text" name="name">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <hr>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 220px; text-align: left; padding : 5px;">
-                                Email
-                            </td>
-                            <td>
-                                : <input type="email" name="email">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <hr>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 220px; text-align: left; padding : 5px;">
-                                User Name
-                            </td>
-                            <td>
-                                : <input type="text" name="username">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <hr>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 220px; text-align: left; padding : 5px;">
-                                Password
-                            </td>
-                            <td>
-                                : <input type="password" name="password">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <hr>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 220px; text-align: left; padding : 5px;">
-                                Confirm Password
-                            </td>
-                            <td>
-                                : <input type="password" name="password">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <hr>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <fieldset>
-                                    <legend>Gender</legend>
-                                    <input type="radio" name="gender" id=""> Male
-                                    <input type="radio" name="gender" id=""> Female
-                                    <input type="radio" name="gender" id=""> Other
-                                </fieldset>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <hr>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <fieldset>
-                                    <legend>Date Of Birth</legend>
-                                    <table>
-                                        <tr>
-                                            <td>
-                                                <input type="text" name="dd" value="" maxlength="2" size="3"> <b>/</b>
-                                            </td>
-                                            <td>
-                                                <input type="text" name="mm" value="" maxlength="2" size="3"> <b>/</b>
-                                            </td>
-                                            <td>
-                                                <input type="text" name="yyyy" value="" maxlength="4" size="3">
-                                            </td>
-                                            <td><i>(dd/mm/yyyy)</i></td>
+                    <form action="./regProcess.php" method="post">
+                        <table>
+                            <tr>
+                                <td style="width: 220px; text-align: left; padding : 5px;">
+                                    Name
+                                </td>
+                                <td>
+                                    : <input type="text" name="name">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 220px; text-align: left; padding : 5px;">
+                                    Email
+                                </td>
+                                <td>
+                                    : <input type="email" name="email">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 220px; text-align: left; padding : 5px;">
+                                    User Name
+                                </td>
+                                <td>
+                                    : <input type="text" name="username">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 220px; text-align: left; padding : 5px;">
+                                    Password
+                                </td>
+                                <td>
+                                    : <input type="password" name="password">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 220px; text-align: left; padding : 5px;">
+                                    Confirm Password
+                                </td>
+                                <td>
+                                    : <input type="password" name="password">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <fieldset>
+                                        <legend>Gender</legend>
+                                        <input type="radio" name="gender" id=""> Male
+                                        <input type="radio" name="gender" id=""> Female
+                                        <input type="radio" name="gender" id=""> Other
+                                    </fieldset>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <fieldset>
+                                        <legend>Date Of Birth</legend>
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <input type="text" name="dd" value="" maxlength="2" size="3"> <b>/</b>
+                                                </td>
+                                                <td>
+                                                    <input type="text" name="mm" value="" maxlength="2" size="3"> <b>/</b>
+                                                </td>
+                                                <td>
+                                                    <input type="text" name="yyyy" value="" maxlength="4" size="3">
+                                                </td>
+                                                <td><i>(dd/mm/yyyy)</i></td>
 
-                                        </tr>
-                                    </table>
-                                </fieldset>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <hr>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="submit" name="submit" value="Submit">
-                                <input type="reset" name="reset" value="Reset">
-                            </td>
-                        </tr>
-                    </table>
+                                            </tr>
+                                        </table>
+                                    </fieldset>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="submit" name="submit" value="Submit">
+                                    <input type="reset" name="reset" value="Reset">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
                 </fieldset>
             </td>
         </tr>

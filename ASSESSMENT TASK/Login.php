@@ -23,30 +23,31 @@
         <td colspan="2" align="center" valign="center" style="border:none; padding:10px;height: 300px;">
             <fieldset style="display: inline-block">
                 <legend>LOGIN</legend>
-                <table>
-                    <tr>
-                        <td>
-                            User Name
-                        </td>
-                        <td>
-                            : <input type="text" name="username"><br>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Password
-                        </td>
-                        <td>
-                            : <input type="password" name="password"><br>
-                        </td>
-                    </tr>
-                </table>
-                <hr>
-                <div align=left>
-                    <input type="checkbox" name="remember"> Remember me <br> <br>
-                    <input type="submit" name="login" value="Submit"> <a href="./Forgot_password.php">Forgot Password?</a>
-                </div>
-
+                <form action="./LoginCheck.php" method="post">
+                    <table>
+                        <tr>
+                            <td>
+                                User Name
+                            </td>
+                            <td>
+                                : <input type="text" name="username"><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Password
+                            </td>
+                            <td>
+                                : <input type="password" name="password"><br>
+                            </td>
+                        </tr>
+                    </table>
+                    <hr>
+                    <div align=left>
+                        <input type="checkbox" name="remember"> Remember me <br> <br>
+                        <input type="submit" name="login" value="Submit"> <a href="./Forgot_password.php">Forgot Password?</a>
+                    </div>
+                </form>
             </fieldset>
         </td>
         </td>
