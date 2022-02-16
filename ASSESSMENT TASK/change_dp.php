@@ -1,3 +1,7 @@
+<?php 
+	session_start();
+	if(isset($_COOKIE['status'])){
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,6 +61,9 @@
 </html>
 
 <?php
+}else{
+    echo "<center><h1>You are not logged in<h1></center>";
+}
 if (isset($_POST['upload'])) {
     $path_parts = pathinfo($_FILES["img_upload"]["name"]);
     $extension = $path_parts['extension'];
