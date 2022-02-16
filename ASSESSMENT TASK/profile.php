@@ -1,3 +1,8 @@
+<?php 
+	session_start();
+	if(isset($_COOKIE['status'])){
+        print_r($_SESSION);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +21,7 @@
             </td>
             <td style="padding:12px; border-bottom: 5px single black collapse; border-left: 0px solid; text-align: right">
                 Logged in as
-                <a href="./profile.php">Bob</a> |
+                <a href="./profile.php"><?=$_SESSION['user']['name']?></a> |
                 <a href="./logout.php">Logout</a>
             </td>
         </tr>
@@ -42,7 +47,7 @@
                                 Name
                             </td style="border-bottom: 1px solid gray;">
                             <td style="border-bottom: 1px solid gray;">
-                                :Bob
+                                :<?=$_SESSION['user']['name']?>
                             </td>
                             <td style="text-align: center; padding-left: 10px;" rowspan="3">
                                 <img src="https://i.ibb.co/SyWBnFb/image.png" alt="image" border="0"> <br>
@@ -55,7 +60,7 @@
                                 Email
                             </td>
                             <td style="border-bottom: 1px solid gray;">
-                                :bob@aiub.edu
+                                :<?=$_SESSION['user']['email']?>
                             </td>
                         </tr>
 
@@ -64,7 +69,7 @@
                                 Gender
                             </td>
                             <td style="border-bottom: 1px solid gray;">
-                                :Male
+                                :<?=$_SESSION['user']['gender']?>
                             </td>
                         </tr>
 
@@ -92,3 +97,8 @@
 </body>
 
 </html>
+<?php
+	}else{
+		echo "<center><h1>You are not logged in<h1></center>";
+	}
+?>
