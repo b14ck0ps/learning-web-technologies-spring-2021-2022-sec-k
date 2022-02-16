@@ -57,9 +57,16 @@
 </html>
 
 <?php
-    if (isset($_POST['upload'])) {
+if (isset($_POST['upload'])) {
+    $path_parts = pathinfo($_FILES["img_upload"]["name"]);
+    $extension = $path_parts['extension'];
+    if($extension == "jpg" || $extension == "jpeg" || $extension == "png" || $extension =="gif"){
         $img_name = $_FILES['img_upload']['name'];
         $tmp_img_name = $_FILES['img_upload']['tmp_name'];
         move_uploaded_file($tmp_img_name, $img_name);
+        rename($img_name, "image.png");
+    }else{
+        echo "Invalid file format";
     }
+}
 ?>
