@@ -20,7 +20,7 @@
             </td>
             <td style="padding:12px; border-bottom: 5px single black collapse; border-left: 0px solid; text-align: right">
                 Logged in as
-                <a href="./profile.php">Bob</a> |
+                <a href="./profile.php"><?=$_SESSION['user']['name']?></a> |
                 <a href="./logout.php">Logout</a>
             </td>
         </tr>
@@ -33,7 +33,7 @@
                     <li><a href="profile.php">View Profile</a></li>
                     <li><a href="edit_profile.php">Edit Profile</a></li>
                     <li><a href="change_dp.php">Change Profile Picture</a></li>
-                    <li><a href="change_password.php">Chnage Password</a></li>
+                    <li><a href="change_password.php">Change Password</a></li>
                     <li><a href="logout.php">Log out</a></li>
                 </ul>
             </td>

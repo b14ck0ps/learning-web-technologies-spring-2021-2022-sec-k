@@ -34,7 +34,7 @@
                     <li><a href="profile.php">View Profile</a></li>
                     <li><a href="edit_profile.php">Edit Profile</a></li>
                     <li><a href="change_dp.php">Change Profile Picture</a></li>
-                    <li><a href="change_password.php">Chnage Password</a></li>
+                    <li><a href="change_password.php">Change Password</a></li>
                     <li><a href="logout.php">Log out</a></li>
                 </ul>
             </td>
