@@ -16,8 +16,8 @@
             </td>
             <td style="padding:12px; border-bottom: 5px single black collapse; border-left: 0px solid; text-align: right">
                 Logged in as
-                <a href="#profile">Bob</a> |
-                <a href="#logout">Logout</a>
+                <a href="./profile.php">Bob</a> |
+                <a href="./logout.php">Logout</a>
             </td>
         </tr>
         <tr style="border: 2px solid black;">

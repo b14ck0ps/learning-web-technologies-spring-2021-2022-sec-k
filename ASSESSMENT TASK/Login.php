@@ -15,9 +15,9 @@
                 <img src="https://i.ibb.co/Sm8cSr0/image.png" alt="logo"></a>
             </td>
             <td style=" padding:12px; border:none; text-align: right">
-                <a href="#Home">Home</a> |
-                <a href="#Login">Login</a> |
-                <a href="#Registration">Registration</a>
+                <a href="./public_home.php">Home</a> |
+                <a href="./Login.php">Login</a> |
+                <a href="./registration.php">Registration</a>
             </td>
         </tr>
         <td colspan="2" align="center" valign="center" style="border:none; padding:10px;height: 300px;">
@@ -44,7 +44,7 @@
                 <hr>
                 <div align=left>
                     <input type="checkbox" name="remember"> Remember me <br> <br>
-                    <input type="submit" name="login" value="Submit"> <a href="">Forgot Password?</a>
+                    <input type="submit" name="login" value="Submit"> <a href="./Forgot_password.php">Forgot Password?</a>
                 </div>
 
             </fieldset>
