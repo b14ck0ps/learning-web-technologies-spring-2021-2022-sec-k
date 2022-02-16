@@ -1,3 +1,7 @@
+<?php 
+	session_start();
+	if(isset($_COOKIE['status'])){
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,7 +46,7 @@
                                 Name
                             </td>
                             <td>
-                                : <input type="text" name="name">
+                                : <input type="text" name="name" value="<?=$_SESSION['user']['name']?>">
                             </td>
                         </tr>
                         <tr>
@@ -55,7 +59,7 @@
                                 Email
                             </td>
                             <td>
-                                : <input type="email" name="email">
+                                : <input type="email" name="email" value="<?=$_SESSION['user']['email']?>">
                             </td>
                         </tr>
                         <tr>
@@ -74,9 +78,9 @@
                             </td>
                             <td colspan="2">
                                     :
-                                    <input type="radio" name="gender" id=""> Male
-                                    <input type="radio" name="gender" id=""> Female
-                                    <input type="radio" name="gender" id=""> Other
+                                    <input type="radio" name="gender" <?php if ($_SESSION['user']['gender'] == 'Male')  echo ' checked="checked"';?> > Male
+                                    <input type="radio" name="gender" <?php if ($_SESSION['user']['gender'] == 'Female')  echo ' checked="checked"';?> > Female
+                                    <input type="radio" name="gender" <?php if ($_SESSION['user']['gender'] == 'Other')  echo ' checked="checked"';?> > Other
                             </td>
                         </tr>
                         <tr>
@@ -90,7 +94,7 @@
                                     <table>
                                         <tr>
                                             <td>
-                                                : <input type="text" name="dob" value=""><br>
+                                                : <input type="text" name="dob" value="<?=$_SESSION['user']['dob']['dd']?>/<?=$_SESSION['user']['dob']['mm']?>/<?=$_SESSION['user']['dob']['yyyy']?>"><br>
                                                 <i>(dd/mm/yyyy)</i>
                                             </td>
                                         </tr>
@@ -122,3 +126,8 @@
 </body>
 
 </html>
+<?php
+	}else{
+		echo "<center><h1>You are not logged in<h1></center>";
+	}
+?>
