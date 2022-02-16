@@ -8,7 +8,12 @@
 			$user = $_SESSION['user'];
 			if($user['username'] == $username && $user['password'] == $password){
 				$_SESSION['status'] = true;
-				setcookie('status', 'true', time()+3600, '/');
+				if(isset($_REQUEST['remember'])){
+					setcookie('status', 'true', time() + 3600, '/');
+					setcookie(session_name(),session_id(),time()+ 3600);
+				}else{
+					setcookie('status',true);
+				}
 				header('location: ./Dashboard.php');
 			}else{
 				echo "invalid user..";
