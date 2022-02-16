@@ -1,3 +1,8 @@
+<?php 
+	session_start();
+	if(isset($_COOKIE['status'])){
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +21,7 @@
             </td>
             <td style="padding:12px; border-bottom: 5px single black collapse; border-left: 0px solid; text-align: right">
                 Logged in as
-                <a href="./profile.php">Bob</a> |
+                <a href="./profile.php"><?=$_SESSION['user']['name']?></a> |
                 <a href="./logout.php">Logout</a>
             </td>
         </tr>
@@ -34,7 +39,7 @@
                 </ul>
             </td>
             <td style="vertical-align: top; text-align: left;padding: 5px;">
-                <h4>Welcome Bob</h4>
+                <h4>Welcome <?=$_SESSION['user']['name']?></h4>
             </td>
         </tr>
         </tr>
@@ -47,3 +52,8 @@
 </body>
 
 </html>
+<?php
+	}else{
+		echo "<center><h1>You are not logged in<h1></center>";
+	}
+?>
