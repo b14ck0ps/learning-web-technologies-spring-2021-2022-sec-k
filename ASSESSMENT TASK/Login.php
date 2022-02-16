@@ -10,7 +10,7 @@
 
 <body>
     <table border="2" style="border-collapse: collapse;" width="100%">
-        <tr>
+        <tr style="border: 2px solid black;">
             <td style="border:none;">
                 <img src="https://i.ibb.co/Sm8cSr0/image.png" alt="logo"></a>
             </td>
@@ -18,11 +18,6 @@
                 <a href="#Home">Home</a> |
                 <a href="#Login">Login</a> |
                 <a href="#Registration">Registration</a>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" style="border:none;">
-                <hr style="border: none; border-bottom: 2px solid gray;">
             </td>
         </tr>
         <td colspan="2" align="center" valign="center" style="border:none; padding:10px;height: 300px;">
@@ -56,13 +51,8 @@
         </td>
         </td>
         </tr>
-        <tr>
-            <td colspan="2" style="border:none;">
-                <hr style="border: none; border-bottom: 2px solid gray;">
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" style="border:none; text-align: center">
+        <tr style="border: 2px solid black;">
+            <td colspan="2" style="border:none; text-align: center; padding: 20px;">
                 Copyright &copy; 2017
             </td>
         </tr>
