@@ -4,19 +4,18 @@ $data = file('../models/user.txt');
 $username = null;
 $password = null;
 $email = null;
-	$username = $_REQUEST['username'];
-		$data = array_map('replace_user_info', $data);
-		$tmp = '../models/user.tmp';
-		$user = '../models/user.txt';
-		file_put_contents($tmp, implode('', $data));
-		rename($tmp, $user);
-	header('location: ../views/userlist.php');
-
-function replace_user_info($data)
-{
-	global $username;
-	if (stristr($data, $username)){
-		return "";
+if (isset($_REQUEST['delete'])) {
+	$id = $_REQUEST['id'];
+	$file = fopen('../models/user.txt', 'r');
+	$updatedContent = "";
+	while (!feof($file)) {
+		$line = fgets($file);
+		$user = explode('|', $line);
+		if ($user[0] != $id) {
+			$updatedContent .= $line;
+		}
 	}
-	return $data;
+	$file = fopen('../models/user.txt', 'w');
+	fwrite($file, $updatedContent);
+	header('location: ../views/userlist.php');
 }
