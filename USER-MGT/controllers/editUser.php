@@ -16,7 +16,7 @@ if (isset($_REQUEST['edit'])) {
 			$line = fgets($file);
 			$user = explode('|', $line);
 			if ($user[0] == $id) {
-				$line = $id . '|' . $username . '|' . $password . '|' . $email . '|' . "\r\n";
+				$line = $id . '|' . $username . '|' . $password . '|' . $email ."\r\n";
 			}
 			$updatedContent .= $line;
 		}
