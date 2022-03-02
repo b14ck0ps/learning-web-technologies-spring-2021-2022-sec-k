@@ -24,23 +24,21 @@ require('../controllers/header.php');
 		</tr>
 		<?php
 		$file = fopen('../models/user.txt', 'r');
-		$idcount = 1;
 		while (!feof($file)) {
 			$user = fgets($file);
 			$userArry = explode('|', $user);
 			if ($userArry[0] != null) {
 				echo "<tr>";
-				echo "<td>" . $idcount . "</td>";
 				echo "<td>" . $userArry[0] . "</td>";
-				echo "<td>" . $userArry[2] . "</td>";
 				echo "<td>" . $userArry[1] . "</td>";
+				echo "<td>" . $userArry[2] . "</td>";
+				echo "<td>" . $userArry[3] . "</td>";
 				echo "<td>";
-				echo "<a href='edit.php?username=" . $userArry[0] . "'> EDIT </a> | ";
-				echo "<a href='../controllers/delete.php?username=" . $userArry[0] . "'> DELETE </a>";
+				echo "<a href='edit.php?id=" . $userArry[0] . "'> EDIT </a> | ";
+				echo "<a href='../views/delete.php?id=" . $userArry[0] . "'> DELETE </a>";
 				echo "</td>";
 				echo "</tr>";
 			}
-			$idcount++;
 		}
 		?>
 	</table>
