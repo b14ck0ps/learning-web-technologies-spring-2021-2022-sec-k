@@ -12,7 +12,7 @@ function login($username , $password){
 }
 function userinfo($username){
     $conn = mysqli_connect("localhost" , "root" , "" , "testdb");
-    $sql = "SELECT * FROM users WHERE username = '{$username}'";
+    $sql = "SELECT * FROM userinfo WHERE username = '{$username}'";
     $result = mysqli_query($conn , $sql);
     $row = mysqli_fetch_assoc($result);
     if($row)
